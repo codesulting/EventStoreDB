@@ -50,6 +50,7 @@ namespace EventStore.Core.Cluster.Settings {
 		public readonly bool DisableFirstLevelHttpAuthorization;
 		public readonly bool DisableScavengeMerging;
 		public readonly int ScavengeHistoryMaxAge;
+		public readonly int ScavengeBackendCacheSize;
 		public bool AdminOnPublic;
 		public bool StatsOnPublic;
 		public bool GossipOnPublic;
@@ -119,6 +120,7 @@ namespace EventStore.Core.Cluster.Settings {
 			IAuthenticationProviderFactory authenticationProviderFactory,
 			bool disableScavengeMerging,
 			int scavengeHistoryMaxAge,
+			int scavengeBackendCacheSize,
 			bool adminOnPublic,
 			bool statsOnPublic,
 			bool gossipOnPublic,
@@ -226,6 +228,7 @@ namespace EventStore.Core.Cluster.Settings {
 			NodePriority = nodePriority;
 			DisableScavengeMerging = disableScavengeMerging;
 			ScavengeHistoryMaxAge = scavengeHistoryMaxAge;
+			ScavengeBackendCacheSize = scavengeBackendCacheSize;
 			AdminOnPublic = adminOnPublic;
 			StatsOnPublic = statsOnPublic;
 			GossipOnPublic = gossipOnPublic;
