@@ -275,5 +275,8 @@ namespace EventStore.Core.TransactionLog.Scavenging {
 		public void DeleteMetastreamData() {
 			_metastreamDatas.DeleteAll();
 		}
+
+		public IEnumerable<TStreamId> LookupStreamIds(ulong streamHash) =>
+			_collisionDetector.LookupStreamIds(streamHash);
 	}
 }

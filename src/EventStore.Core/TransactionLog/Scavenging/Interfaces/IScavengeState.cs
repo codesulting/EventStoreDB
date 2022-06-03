@@ -83,6 +83,8 @@ namespace EventStore.Core.TransactionLog.Scavenging {
 			CalculationStatus status,
 			DiscardPoint discardPoint,
 			DiscardPoint maybeDiscardPoint);
+
+		IEnumerable<TStreamId> LookupStreamIds(ulong streamHash);
 	}
 
 	public interface IIncreaseChunkWeights {
